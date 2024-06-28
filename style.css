@@ -1,0 +1,148 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(49deg, rgba(0,139,139) 0%, rgba(187, 0, 255, 1) 100%);
+  background-repeat: no-repeat;
+}
+
+main {
+  border-radius: 0.6rem;
+  background-color:#fff;
+  filter: drop-shadow(hsl(0, 0%, 0%, 10%) 0 0.2rem 0.4rem);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 24px;
+  color:#34355B;
+}
+
+p {
+  text-align: center;
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  color:#34355B;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+
+  & :hover {
+    animation: move 0.90s infinite ease-in-out;
+  }
+}
+
+.caixabranca {
+  background-color: white;
+  width: 428px;
+  height: 424px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(hsla(0, 0%, 0%, 0.8) 0 20px 50px);
+}
+
+.caixabrancaAberta {
+  background-color: white;
+  width: 428px;
+  height: 564px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(hsla(0, 0%, 0%, 0.8) 0 20px 50px);
+
+  & p {
+    color: #34355B;
+    font-size: 24px;
+    font-family: 'dancing script', sans-serif;
+    background-color: #E4EDF1;
+    font-weight: 400;
+    padding: 10px;
+    animation: surge 2s;
+  }
+
+  & button {
+    color: #FFF;
+    background-color: #FF9500;
+    border: none;
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 17px;
+    font-size: 15px;
+    font-weight: 400px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e08e00;
+    }
+  }
+
+  & h1 {
+    color: #34355B;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 17px;
+    margin-top: 0px;
+  }
+
+  & img {
+    margin-top: 17px;
+  }
+}
+
+.img-animation:focus {
+  animation: treme 1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes move {
+  0% {
+    margin-left: 5;
+    rotate: 5deg;
+  }
+
+  25% {
+    margin-left: 5;
+    rotate: -5deg;
+  }
+
+  50% {
+    margin-left: 15;
+    rotate: 5deg;
+  }
+
+  75% {
+    margin-left: -5;
+    rotate: -5deg;
+  }
+
+  100% {
+    margin-left: -15;
+    rotate: 5deg;
+  }
+}
+
+@keyframes surge {
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  0% {
+    transform: translateY(200px) scale(0.1);
+  }
+}
+
+.hide {
+  display: none;
+}
